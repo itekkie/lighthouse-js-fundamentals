@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en"> <!--for english-->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>For challengess</title>
+  </head>
+  <body>
+    <script>
+// ex1
+// function addTen(x) {
+//   return x + 10;
+// }
+
+// function divideByThree(y) {
+//   return y / 3;
+// }
+
+// var result = addTen(2);
+// console.log(divideByThree(result));
+
+// Ex.2
+
+// var z = 1;
+
+// function addTwo() {
+//   z = z + 2;
+// }
+
+// addTwo();
+// z = z + 1;
+// console.log(z);
+
+// ex3
+
+// var p = 1;
+
+// function addTwo() {
+//   var p = p + 2;
+  
+// }
+
+// addTwo();
+// p = p + 5;
+// console.log(p); 
+
+function makeLine(length) {
+  var line = "";
+  for (var j = 1; j <= length; j++) {
+    line += "Ex.3 * "
+  }
+  return line + "\n";
+}
+
+function buildTriangle(length) {
+// Let's build a huge string equivalent to the triangle
+  var triangle = "";
+//Let's start from the topmost line
+  var lineNumber = 1;
+  for(lineNumber=1; lineNumber<=length; lineNumber++){
+// Rather, we will make a huge string that will comprise the whole triangle
+  triangle = triangle + makeLine(lineNumber);
+    }
+    return triangle;
+}
+
+// Note that the function buildTriangle() must return a string 
+// because the console.log() accepts a string argument
+console.log(buildTriangle(5));
+
+// ex 4
+
+// function expression catSays
+var catSays = function(max) {
+  var catMessage = "";
+  for (var i = 0; i < max; i++) {
+    catMessage += "meow ";
+  }
+  return catMessage;
+};
+
+// function declaration helloCat accepting a callback
+function helloCat(callbackFunc) {
+  return "Ex.4. CallBackFunction. \"Hello " + callbackFunc(3) +" \ ";
+}
+
+// pass in catSays as a callback function
+console.log(helloCat(catSays));
+
+// ex.5
+function movies(messageFunction, name) {
+  messageFunction(name);
+}
+movies(function displayFavorite(movieName) {
+  console.log("Ex.5. My favorite movie is " + movieName);
+}, "Finding Nemo");
+
+// ex.6
+var laugh = function (num){
+    var sound = ""
+    for (var l=0; l<num; l++) {
+      sound = sound + "ha";
+    }
+    sound = "Ex.6. " +  sound + "!";
+    return sound;
+}
+
+console.log(laugh(10));
+
+// ex.7
+var cry = function myFunc (){
+ var myString = "Ex.7. boohoo!"
+ return myString
+}
+console.log(cry())
+
+// ex.8
+function emotions(myString, myFunc) {
+    console.log("Ex.8. I am " + myString + ", " + myFunc(2));
+}
+emotions ("happy", function(num) {
+  var sound = ""; // Local variable
+    //Iterate
+  for (var i = 0 ; i < num ; i++) {
+      sound = sound + "ha" ;  
+   }
+  sound = sound +"!"; 
+  return sound; 
+});
+
+// ex.9
+
+const sayHello  = function (name) {
+  console.log("Ex.9. Hello, " + name);
+}
+sayHello("Jhon")
+
+// ex.10
+const isEven  = function (num) {
+  return num % 2 === 0;
+}
+
+console.log(isEven(10));
+console.log(isEven(11));
+
+// ex.11
+function isOdd(nm) {
+  return nm % 2 != 0;
+ 
+}
+console.log("3 is odd: " + isOdd(3));
+console.log("8 is odd: " + isOdd(8));
+
+   </script>
+</body>
+</html>  
